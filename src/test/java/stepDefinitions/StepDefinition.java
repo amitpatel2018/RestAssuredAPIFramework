@@ -69,6 +69,7 @@ public class StepDefinition extends Utils {
 	    request = given().spec(requestSpecification()).queryParam("place_id", placeID);
 	    user_calls_with_http_request(resource, "get");
 	   String actualName = getJsonPath(response, "name");
+	   System.out.println(actualName);
 	   assertEquals(expectedName, actualName);
 	}
 	@Given("DeletePlace PayLoad")
